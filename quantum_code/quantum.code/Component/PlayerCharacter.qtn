@@ -1,4 +1,4 @@
 component PlayerCharacter
 {
-
+    player_ref Player;
 }

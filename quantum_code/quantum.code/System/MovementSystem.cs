@@ -15,7 +15,7 @@ public unsafe class MovementSystem : SystemMainThreadFilter<MovementSystem.Filte
     public override void Update(Frame f, ref Filter filter)
     {
         // note: pointer property access via -> instead of .
-        var input = *f.GetPlayerInput(0);
+        var input = *f.GetPlayerInput(filter.playerCharacter->Player);
         FPVector2 velocity = filter.physicsBody2D->Velocity;
         velocity.X = input.Direction.X * 5;
         filter.physicsBody2D->Velocity = FPVector2.Lerp(velocity, filter.physicsBody2D->Velocity, f.DeltaTime * 3);

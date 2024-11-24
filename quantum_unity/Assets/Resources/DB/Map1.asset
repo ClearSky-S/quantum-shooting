@@ -83,10 +83,138 @@ MonoBehaviour:
         IsTrigger: 0
         ColliderIndex: 0
         MutableMode: 0
+    - Rotation:
+        RawValue: 0
+      Position:
+        X:
+          RawValue: 332267
+        Y:
+          RawValue: -35389
+      Height:
+        RawValue: 0
+      VerticalOffset:
+        RawValue: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      Layer: 0
+      ShapeType: 4
+      CircleRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 327680
+        Y:
+          RawValue: 32768
+      EdgeExtent:
+        RawValue: 0
+      PolygonCollider:
+        Identifier:
+          Path: 
+          Guid:
+            Value: 0
+        Vertices: []
+        Normals: []
+      StaticData:
+        Name: GroundCollider (3)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 1
+        MutableMode: 0
+    - Rotation:
+        RawValue: 0
+      Position:
+        X:
+          RawValue: -327680
+        Y:
+          RawValue: -65536
+      Height:
+        RawValue: 0
+      VerticalOffset:
+        RawValue: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      Layer: 0
+      ShapeType: 4
+      CircleRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 32768
+        Y:
+          RawValue: 327680
+      EdgeExtent:
+        RawValue: 0
+      PolygonCollider:
+        Identifier:
+          Path: 
+          Guid:
+            Value: 0
+        Vertices: []
+        Normals: []
+      StaticData:
+        Name: GroundCollider (1)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 2
+        MutableMode: 0
+    - Rotation:
+        RawValue: 0
+      Position:
+        X:
+          RawValue: 327680
+        Y:
+          RawValue: -65536
+      Height:
+        RawValue: 0
+      VerticalOffset:
+        RawValue: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      Layer: 0
+      ShapeType: 4
+      CircleRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 32768
+        Y:
+          RawValue: 327680
+      EdgeExtent:
+        RawValue: 0
+      PolygonCollider:
+        Identifier:
+          Path: 
+          Guid:
+            Value: 0
+        Vertices: []
+        Normals: []
+      StaticData:
+        Name: GroundCollider (2)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 3
+        MutableMode: 0
     StaticColliders3D: []
     MapEntities: []
   Prototypes:
-  - CharacterController2D: []
+  - PlayerCharacter:
+    - _empty_prototype_dummy_field_: 0
+    CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []
     NavMeshAvoidanceObstacle: []
@@ -119,7 +247,7 @@ MonoBehaviour:
           Id:
             Value: 0
         CircleRadius:
-          RawValue: 0
+          RawValue: 26214
         EdgeExtent:
           RawValue: 0
         BoxExtents:
@@ -131,14 +259,14 @@ MonoBehaviour:
           X:
             RawValue: 0
           Y:
-            RawValue: 26214
+            RawValue: 0
         RotationOffset:
           RawValue: 0
         UserTag: 0
         IsPersistent: 1
         CompoundShapes: []
         IsSetFromSourceCollider: 0
-      Layer: 0
+      Layer: 3
       IsTrigger: 0
       PhysicsMaterial:
         Id:
@@ -151,9 +279,9 @@ MonoBehaviour:
     Transform2D:
     - Position:
         X:
-          RawValue: 0
+          RawValue: -138280
         Y:
-          RawValue: 0
+          RawValue: 144179
       Rotation:
         RawValue: 0
     Transform2DVertical: []

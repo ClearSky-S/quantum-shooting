@@ -10,7 +10,9 @@ public class LocalInput : MonoBehaviour {
   }
 
   public void PollInput(CallbackPollInput callback) {
-    Quantum.Input i = new Quantum.Input(); 
+    Quantum.Input i = new Quantum.Input();
+    i.Direction = new FPVector2(UnityEngine.Input.GetAxis("Horizontal").ToFP(), UnityEngine.Input.GetAxis("Vertical").ToFP());
+    i.Jump = UnityEngine.Input.GetButton("Jump");
     callback.SetInput(i, DeterministicInputFlags.Repeatable);
   }
 }

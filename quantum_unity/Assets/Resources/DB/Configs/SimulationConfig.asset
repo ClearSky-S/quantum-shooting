@@ -39,7 +39,7 @@ MonoBehaviour:
         X:
           RawValue: 0
         Y:
-          RawValue: -655360
+          RawValue: -1310720
         Z:
           RawValue: 0
       SolverType: 1
@@ -101,7 +101,7 @@ MonoBehaviour:
       - Default
       - TransparentFX
       - Ignore Raycast
-      - 
+      - Player
       - Water
       - UI
       - 
@@ -130,7 +130,7 @@ MonoBehaviour:
       - 
       - 
       - 
-      LayerMatrix: fffefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+      LayerMatrix: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     Entities:
       CommitCommandsMode: 0
       DefaultEntityCapacity: 1024

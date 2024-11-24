@@ -40,7 +40,124 @@ MonoBehaviour:
     GridNodeSize: 4
     NavMeshLinks: []
     Regions: []
-    StaticColliders2D: []
+    StaticColliders2D:
+    - Rotation:
+        RawValue: 0
+      Position:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: -65536
+      Height:
+        RawValue: 0
+      VerticalOffset:
+        RawValue: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      Layer: 0
+      ShapeType: 4
+      CircleRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 327680
+        Y:
+          RawValue: 32768
+      EdgeExtent:
+        RawValue: 0
+      PolygonCollider:
+        Identifier:
+          Path: 
+          Guid:
+            Value: 0
+        Vertices: []
+        Normals: []
+      StaticData:
+        Name: GroundCollider
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 0
+        MutableMode: 0
     StaticColliders3D: []
     MapEntities: []
-  Prototypes: []
+  Prototypes:
+  - CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D:
+    - Version: 2
+      Config:
+        Value: 118
+      Mass:
+        RawValue: 65536
+      Drag:
+        RawValue: 32768
+      AngularDrag:
+        RawValue: 32768
+      CenterOfMass:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+      GravityScale:
+        _hasValue: 0
+        _value:
+          RawValue: 65536
+    PhysicsBody3D: []
+    PhysicsCollider2D:
+    - ShapeConfig:
+        ShapeType: 4
+        PolygonCollider:
+          Id:
+            Value: 0
+        CircleRadius:
+          RawValue: 0
+        EdgeExtent:
+          RawValue: 0
+        BoxExtents:
+          X:
+            RawValue: 19660
+          Y:
+            RawValue: 26214
+        PositionOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 26214
+        RotationOffset:
+          RawValue: 0
+        UserTag: 0
+        IsPersistent: 1
+        CompoundShapes: []
+        IsSetFromSourceCollider: 0
+      Layer: 0
+      IsTrigger: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D:
+    - CallbackFlags:
+        Value: 0
+    PhysicsCallbacks3D: []
+    Transform2D:
+    - Position:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+      Rotation:
+        RawValue: 0
+    Transform2DVertical: []
+    Transform3D: []
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []

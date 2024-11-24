@@ -35,12 +35,12 @@ MonoBehaviour:
   DrawStaticMeshNormals: 1
   DrawSceneMeshCells: 1
   DrawSceneMeshTriangles: 1
-  StaticColliderColor: {r: 0.70980394, g: 0.9019608, b: 0.11372549, a: 1}
-  DynamicColliderColor: {r: 0.6, g: 0.8509804, b: 0.91764706, a: 1}
-  KinematicColliderColor: {r: 1, g: 1, b: 1, a: 1}
-  CharacterControllerColor: {r: 1, g: 1, b: 0, a: 1}
-  AsleepColliderColor: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 1}
-  DisabledColliderColor: {r: 1, g: 0, b: 0, a: 1}
+  StaticColliderColor: {r: 0.70980394, g: 0.9019608, b: 0.11372549, a: 0.4}
+  DynamicColliderColor: {r: 0.6, g: 0.8509804, b: 0.91764706, a: 0.4}
+  KinematicColliderColor: {r: 1, g: 1, b: 1, a: 0.4}
+  CharacterControllerColor: {r: 1, g: 1, b: 0, a: 0.4}
+  AsleepColliderColor: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 0.4}
+  DisabledColliderColor: {r: 1, g: 0, b: 0, a: 0.4}
   DrawJointGizmos: 6
   JointGizmosStyle:
     DisableFill: 0
@@ -69,9 +69,7 @@ MonoBehaviour:
   UseQuantumAssetInspector: 1
   UseAssetBasePostprocessor: 1
   UseQuantumToolbarUtilities: 1
-  QuantumToolbarAnchor: 0
-  QuantumToolbarSize: 200
-  QuantumToolbarOffset: 200
+  QuantumToolbarZone: 0
   UsePhotonAppVersionsPostprocessor: 1
   EntityComponentInspectorMode: 2
   FPDisplayPrecision: 5

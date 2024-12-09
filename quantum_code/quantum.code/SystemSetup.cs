@@ -20,10 +20,10 @@ namespace Quantum {
         new Core.NavigationSystem(),
         new Core.EntityPrototypeSystem(),
         new Core.PlayerConnectedSystem(),
-        new PlayerSpawnSystem(),
-        new MovementSystem(),
-
         // user systems go here 
+        new PlayerSpawnSystem(),
+        new PlayerCharacterSystem(),
+        new ProjectileSystem(),
       };
     }
   }

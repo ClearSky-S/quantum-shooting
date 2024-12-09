@@ -2,4 +2,5 @@
 {
     button Jump;
     FPVector2 Direction;
+    button Shoot;
 }

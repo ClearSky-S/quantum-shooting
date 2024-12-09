@@ -46,6 +46,11 @@ MonoBehaviour:
         Id:
           Value: 1201988339937377265
       ResourcePath: DB/PlayerCharacter
+    - Path: Resources/DB/Projectile|EntityView
+      AssetRef:
+        Id:
+          Value: 1365074989939421473
+      ResourcePath: DB/Projectile
     - Path: Resources/DB/Map1
       AssetRef:
         Id:
@@ -61,3 +66,8 @@ MonoBehaviour:
         Id:
           Value: 3093865984696992040
       ResourcePath: DB/Map1_mesh
+    - Path: Resources/DB/Projectile|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 3850695760072768369
+      ResourcePath: DB/Projectile

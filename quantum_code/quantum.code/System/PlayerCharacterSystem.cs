@@ -3,26 +3,38 @@ using Photon.Deterministic;
 using Quantum;
 
 
-public unsafe class MovementSystem : SystemMainThreadFilter<MovementSystem.Filter>
+public unsafe class PlayerCharacterSystem : SystemMainThreadFilter<PlayerCharacterSystem.Filter>
 {
     public struct Filter
     {
         public EntityRef Entity;
-        public PlayerCharacter* playerCharacter;
-        public PhysicsBody2D* physicsBody2D;
+        public PlayerCharacter* PlayerCharacter;
+        public PhysicsBody2D* PhysicsBody2D;
+        public Transform2D* Transform2D;
     }
 
     public override void Update(Frame f, ref Filter filter)
     {
         // note: pointer property access via -> instead of .
-        var input = *f.GetPlayerInput(filter.playerCharacter->Player);
-        FPVector2 velocity = filter.physicsBody2D->Velocity;
+        var input = *f.GetPlayerInput(filter.PlayerCharacter->Player);
+        FPVector2 velocity = filter.PhysicsBody2D->Velocity;
         velocity.X = input.Direction.X * 5;
-        filter.physicsBody2D->Velocity = FPVector2.Lerp(velocity, filter.physicsBody2D->Velocity, f.DeltaTime * 3);
+        filter.PhysicsBody2D->Velocity = FPVector2.Lerp(velocity, filter.PhysicsBody2D->Velocity, f.DeltaTime * 3);
         bool isGrounded = IsGrounded(f, filter.Entity);
         if (input.Jump.WasPressed && isGrounded)
         {
-            filter.physicsBody2D->Velocity.Y = 8;
+            filter.PhysicsBody2D->Velocity.Y = 8;
+        }
+        if(input.Shoot.WasPressed)
+        {
+            // resolve the reference to the prototpye.
+            var prototype = f.FindAsset<EntityPrototype>(filter.PlayerCharacter->Projectile.Id);
+            // Create a new entity for the player based on the prototype.
+            var entity = f.Create(prototype);
+            Projectile* projectile = f.Unsafe.GetPointer<Projectile>(entity);
+            projectile->Owner = filter.Entity;
+            Transform2D* transform = f.Unsafe.GetPointer<Transform2D>(entity);
+            transform->Position = filter.Transform2D->Position;
         }
     }
     

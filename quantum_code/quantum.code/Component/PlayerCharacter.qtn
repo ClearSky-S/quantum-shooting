@@ -1,4 +1,6 @@
 component PlayerCharacter
 {
     player_ref Player;
+    // AssetRefEntityPrototype
+    asset_ref<EntityPrototype> Projectile;
 }

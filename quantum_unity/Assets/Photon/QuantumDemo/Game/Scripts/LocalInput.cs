@@ -13,6 +13,7 @@ public class LocalInput : MonoBehaviour {
     Quantum.Input i = new Quantum.Input();
     i.Direction = new FPVector2(UnityEngine.Input.GetAxis("Horizontal").ToFP(), UnityEngine.Input.GetAxis("Vertical").ToFP());
     i.Jump = UnityEngine.Input.GetButton("Jump");
+    i.Shoot = UnityEngine.Input.GetButton("Fire1");
     callback.SetInput(i, DeterministicInputFlags.Repeatable);
   }
 }

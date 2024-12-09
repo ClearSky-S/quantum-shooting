@@ -1,0 +1,5 @@
+﻿component Projectile
+{
+    entity_ref Owner;
+    FPVector2 Velocity;
+}

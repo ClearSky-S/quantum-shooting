@@ -6,6 +6,20 @@
 using System;
 namespace Quantum.Prototypes.Unity {
   [System.SerializableAttribute()]
+  [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.Projectile))]
+  public class Projectile_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.Projectile_Prototype> {
+    [Quantum.LocalReference]
+    public global::EntityPrototype Owner;
+    public Photon.Deterministic.FPVector2 Velocity;
+
+    public sealed override Quantum.Prototypes.Projectile_Prototype Convert(EntityPrototypeConverter converter) {
+      var result = new Quantum.Prototypes.Projectile_Prototype();
+      converter.Convert(this.Owner, out result.Owner);
+      result.Velocity = this.Velocity;
+      return result;
+    }
+  }
+  [System.SerializableAttribute()]
   [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.PhysicsJoints3D))]
   public class PhysicsJoints3D_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.PhysicsJoints3D_Prototype> {
     [Quantum.Inspector.DynamicCollectionAttribute()]

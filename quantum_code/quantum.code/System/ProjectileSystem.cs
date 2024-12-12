@@ -1,5 +1,7 @@
 ﻿
+using Photon.Deterministic;
 using Quantum;
+using Quantum.Physics2D;
 
 public unsafe class ProjectileSystem : SystemMainThreadFilter<ProjectileSystem.Filter>
 {
@@ -10,34 +12,38 @@ public unsafe class ProjectileSystem : SystemMainThreadFilter<ProjectileSystem.F
         public Transform2D* Transform;
     }
 
+    private Shape2D circle = Shape2D.CreateCircle(FP._0_10);
+
 
     public override void Update(Frame f, ref Filter filter)
     {
+        // Note. Raycast는 충돌 대상의 내부 검사 X, 각도가 180도 넘어가는 표면 충돌 X
+        
         // 충돌 처리
-        var hits = f.Physics2D.RaycastAll(filter.Transform->Position, filter.Projectile->Velocity * f.DeltaTime, 1);
+        FPVector2 delta = filter.Projectile->Velocity * f.DeltaTime;
+        var hits = f.Physics2D.RaycastAll(filter.Transform->Position, delta.Normalized, delta.Magnitude);
+        
         for (int i = 0; i < hits.Count; i++)
         {
-            if(hits[i].Entity == filter.Entity)
+            Hit hit = hits[i];
+
+            if(hit.Entity == filter.Projectile->Owner)
             {
                 continue;
             }
             
             // 충돌한 대상이 적인지 확인
-            if(f.Has<PlayerCharacter>(hits[i].Entity))
+            if(f.Has<PlayerCharacter>(hit.Entity))
             {
-                // 적을 죽이고, 자신도 죽인다.
-                f.Destroy(hits[i].Entity);
-                f.Destroy(filter.Entity);
+                PhysicsBody2D* physicsBody2D = f.Unsafe.GetPointer<PhysicsBody2D>(hit.Entity);
+                physicsBody2D->Velocity = 15 * (filter.Projectile->Velocity.X > 0 ? FPVector2.Right : FPVector2.Left);
             }
-            else
-            {
-                // 적이 아닌 대상과 충돌했을 경우, 자신을 제거한다.
-                f.Destroy(filter.Entity);
-            }
+            f.Destroy(filter.Entity);
+            return;
         }
         
         
         // 이동
-        filter.Transform->Position += filter.Projectile-> Velocity * f.DeltaTime;
+        filter.Transform->Position += delta;
     }
 }

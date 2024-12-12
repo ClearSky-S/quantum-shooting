@@ -230,7 +230,7 @@ MonoBehaviour:
     Owner: {fileID: 0}
     Velocity:
       X:
-        RawValue: 524288
+        RawValue: -131072
       Y:
         RawValue: 0
 --- !u!210 &4813930435242108813

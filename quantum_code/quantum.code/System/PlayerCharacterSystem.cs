@@ -17,6 +17,10 @@ public unsafe class PlayerCharacterSystem : SystemMainThreadFilter<PlayerCharact
     {
         // note: pointer property access via -> instead of .
         var input = *f.GetPlayerInput(filter.PlayerCharacter->Player);
+        if(input.Direction.X != 0)
+        {
+            filter.PlayerCharacter->IsFacingRight = input.Direction.X > 0;
+        }
         FPVector2 velocity = filter.PhysicsBody2D->Velocity;
         velocity.X = input.Direction.X * 5;
         filter.PhysicsBody2D->Velocity = FPVector2.Lerp(velocity, filter.PhysicsBody2D->Velocity, f.DeltaTime * 3);
@@ -33,6 +37,7 @@ public unsafe class PlayerCharacterSystem : SystemMainThreadFilter<PlayerCharact
             var entity = f.Create(prototype);
             Projectile* projectile = f.Unsafe.GetPointer<Projectile>(entity);
             projectile->Owner = filter.Entity;
+            projectile->Velocity = 8 * (filter.PlayerCharacter->IsFacingRight ? FPVector2.Right: FPVector2.Left);
             Transform2D* transform = f.Unsafe.GetPointer<Transform2D>(entity);
             transform->Position = filter.Transform2D->Position;
         }

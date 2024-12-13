@@ -1,5 +1,13 @@
-﻿component Projectile
+﻿// Projectile.qtn
+
+component Projectile
 {
     entity_ref Owner;
     FPVector2 Velocity;
+}
+
+// Events
+event OnProjectileHit
+{
+    entity_ref Projectile;
 }

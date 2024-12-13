@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5744617140424999928}
   - component: {fileID: 490706088790212688}
   - component: {fileID: 4813930435242108813}
+  - component: {fileID: 5331990746380780078}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -245,6 +246,20 @@ SortingGroup:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_SortAtRoot: 0
+--- !u!114 &5331990746380780078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3194959624597292922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 118d5d59511b85e4bad6f8aa352218d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitEffect: {fileID: 6451485990763385623, guid: 28341c21e9a2d924ab14e7828c04d54e,
+    type: 3}
 --- !u!1 &8579369720158453399
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,7 +335,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b,
     type: 3}
-  m_Color: {r: 1, g: 0.3573274, b: 0, a: 1}
+  m_Color: {r: 0.23113209, g: 0.7422679, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

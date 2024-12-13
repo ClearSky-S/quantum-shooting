@@ -1,7 +1,15 @@
+// PlayerCharacter.qtn
+
 component PlayerCharacter
 {
     player_ref Player;
     // AssetRefEntityPrototype
     asset_ref<EntityPrototype> Projectile;
     bool IsFacingRight;
+}
+
+// Events
+event OnWeaponShoot
+{
+    entity_ref PlayerCharacter;
 }

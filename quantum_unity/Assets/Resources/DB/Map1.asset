@@ -47,7 +47,7 @@ MonoBehaviour:
         X:
           RawValue: 0
         Y:
-          RawValue: -65536
+          RawValue: -327024
       Height:
         RawValue: 0
       VerticalOffset:
@@ -63,7 +63,7 @@ MonoBehaviour:
         X:
           RawValue: 327680
         Y:
-          RawValue: 32768
+          RawValue: 237568
       EdgeExtent:
         RawValue: 0
       PolygonCollider:
@@ -87,9 +87,9 @@ MonoBehaviour:
         RawValue: 0
       Position:
         X:
-          RawValue: 332267
+          RawValue: -131727
         Y:
-          RawValue: -49152
+          RawValue: -3276
       Height:
         RawValue: 0
       VerticalOffset:
@@ -103,9 +103,9 @@ MonoBehaviour:
         RawValue: 0
       BoxExtents:
         X:
-          RawValue: 327680
+          RawValue: 65536
         Y:
-          RawValue: 32768
+          RawValue: 6553
       EdgeExtent:
         RawValue: 0
       PolygonCollider:
@@ -129,9 +129,9 @@ MonoBehaviour:
         RawValue: 0
       Position:
         X:
-          RawValue: -327680
+          RawValue: 152698
         Y:
-          RawValue: -65536
+          RawValue: 1966
       Height:
         RawValue: 0
       VerticalOffset:
@@ -145,9 +145,135 @@ MonoBehaviour:
         RawValue: 0
       BoxExtents:
         X:
-          RawValue: 32768
+          RawValue: 65536
         Y:
+          RawValue: 6553
+      EdgeExtent:
+        RawValue: 0
+      PolygonCollider:
+        Identifier:
+          Path: 
+          Guid:
+            Value: 0
+        Vertices: []
+        Normals: []
+      StaticData:
+        Name: GroundCollider (5)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 2
+        MutableMode: 0
+    - Rotation:
+        RawValue: 0
+      Position:
+        X:
+          RawValue: 7208
+        Y:
+          RawValue: 64880
+      Height:
+        RawValue: 0
+      VerticalOffset:
+        RawValue: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      Layer: 0
+      ShapeType: 4
+      CircleRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 65536
+        Y:
+          RawValue: 6553
+      EdgeExtent:
+        RawValue: 0
+      PolygonCollider:
+        Identifier:
+          Path: 
+          Guid:
+            Value: 0
+        Vertices: []
+        Normals: []
+      StaticData:
+        Name: GroundCollider (6)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 3
+        MutableMode: 0
+    - Rotation:
+        RawValue: 0
+      Position:
+        X:
+          RawValue: 332267
+        Y:
+          RawValue: -92405
+      Height:
+        RawValue: 0
+      VerticalOffset:
+        RawValue: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      Layer: 0
+      ShapeType: 4
+      CircleRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
           RawValue: 327680
+        Y:
+          RawValue: 32768
+      EdgeExtent:
+        RawValue: 0
+      PolygonCollider:
+        Identifier:
+          Path: 
+          Guid:
+            Value: 0
+        Vertices: []
+        Normals: []
+      StaticData:
+        Name: GroundCollider (4)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 4
+        MutableMode: 0
+    - Rotation:
+        RawValue: 0
+      Position:
+        X:
+          RawValue: -498073
+        Y:
+          RawValue: -108789
+      Height:
+        RawValue: 0
+      VerticalOffset:
+        RawValue: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      Layer: 0
+      ShapeType: 4
+      CircleRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 192675
+        Y:
+          RawValue: 648806
       EdgeExtent:
         RawValue: 0
       PolygonCollider:
@@ -165,15 +291,15 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 2
+        ColliderIndex: 5
         MutableMode: 0
     - Rotation:
         RawValue: 0
       Position:
         X:
-          RawValue: 327680
+          RawValue: 579338
         Y:
-          RawValue: -65536
+          RawValue: -108789
       Height:
         RawValue: 0
       VerticalOffset:
@@ -187,9 +313,9 @@ MonoBehaviour:
         RawValue: 0
       BoxExtents:
         X:
-          RawValue: 32768
+          RawValue: 267714
         Y:
-          RawValue: 327680
+          RawValue: 579010
       EdgeExtent:
         RawValue: 0
       PolygonCollider:
@@ -207,7 +333,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 3
+        ColliderIndex: 6
         MutableMode: 0
     StaticColliders3D: []
     MapEntities: []

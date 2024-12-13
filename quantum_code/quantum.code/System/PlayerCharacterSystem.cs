@@ -31,6 +31,7 @@ public unsafe class PlayerCharacterSystem : SystemMainThreadFilter<PlayerCharact
         }
         if(input.Shoot.WasPressed)
         {
+            f.Events.OnWeaponShoot(filter.Entity);
             // resolve the reference to the prototpye.
             var prototype = f.FindAsset<EntityPrototype>(filter.PlayerCharacter->Projectile.Id);
             // Create a new entity for the player based on the prototype.

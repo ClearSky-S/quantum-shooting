@@ -35,9 +35,12 @@ public unsafe class ProjectileSystem : SystemMainThreadFilter<ProjectileSystem.F
             // 충돌한 대상이 적인지 확인
             if(f.Has<PlayerCharacter>(hit.Entity))
             {
+                f.Events.OnProjectileHit(filter.Entity);
                 PhysicsBody2D* physicsBody2D = f.Unsafe.GetPointer<PhysicsBody2D>(hit.Entity);
                 physicsBody2D->Velocity = 15 * (filter.Projectile->Velocity.X > 0 ? FPVector2.Right : FPVector2.Left);
             }
+
+            filter.Transform->Position = hit.Point;
             f.Destroy(filter.Entity);
             return;
         }
